@@ -693,9 +693,24 @@ body {
   opacity: 0.8;
 }
 
+
+
 /*Responsiveness*/
 
 @media (max-width: 1200px) {
+
+  .navbar-collapse {
+    position: fixed;
+    top: 90px; 
+    left: 0;
+    width: 100%;
+    font-family: var(--ff-main);
+    background: white;
+    text-align: center; 
+    padding: 30px 0;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  }
+
   .section-title,
   .section-label{
     font-family: var(--ff-main);
@@ -706,6 +721,7 @@ body {
   .features-section .section-title{
     margin-bottom: 2px;
   }
+
   .section-tag{
     display: none;
   }
@@ -814,27 +830,20 @@ body {
 }
 
 @media (max-width: 700px) {
+  .bumble-logo,
+  .footer-logo{
+    width: 70%;
+  }
+  .languages-section,
   .profile-card,
   .price-card,
   .main-img,
   .main-img-2{
     display: none;
   }
+  
   .paragraph-description{
    text-align: center;
-  }
-
-  .languages-section .d-flex {
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-  }
-
-  .languages-section .btn {
-    width: 100%;
-    margin-left: 50px;
-    border-radius: 20px;
-    text-align: center;
   }
   
   .step-card img
@@ -851,28 +860,33 @@ body {
     margin-top: 20px;
   }
 
+  .pricing-section .section-title,
   .testimonial-role{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    display: none;
   }
-}
 
-@media (max-width: 991px) {
+  .logos-container {
+    display: flex;
+    flex-wrap: nowrap; 
+    overflow-x: auto; 
+    background-color: #eef5f9; 
+    padding: 15px 10px;
+    border-radius: 12px;
+    -webkit-overflow-scrolling: touch; 
+  }
+  .logos-container::-webkit-scrollbar {
+    display: none; 
+  }
 
-  .navbar-collapse {
-    position: fixed;
-    top: 90px;
-    left: 0;
-    width: 100%;
-    background: white;
-    padding: 30px 0;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  .logos {
+    flex: 0 0 auto !important; 
   }
-  .nav-item {
-    text-align: center;
-    margin-bottom: 10px;
-  }
+
+    .logos img {
+      height: 24px !important; 
+      width: auto;
+      filter: grayscale(100%); 
+      opacity: 0.7;
+    }
 }
 
